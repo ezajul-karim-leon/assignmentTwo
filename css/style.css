@@ -318,7 +318,7 @@ nav .fa-solid{
 /* footer  */
 footer{
     background: rgb(1, 172, 253);
-    padding-top: 50px;
+    padding: 40px 101px;
     margin: 0px;
 
 }
@@ -399,14 +399,16 @@ footer{
 
 /* for mobile devices  */
 @media screen and (max-width: 576px){
-    .header-content, main{
+    .header-content{
+        margin: 0;
+        padding: 10px;
     }
     nav h3, li, .btn1{
         display: none;
     }
     nav{
         margin: 0;
-        padding: 0 20px 10px;
+        padding: 0 10px 0px;
         border-bottom: 1px solid rgb(254, 163, 1);
     }
 
@@ -438,7 +440,7 @@ footer{
 
     
     .curriculam{
-        padding: 40px;
+        padding: 10px;
     }
     .curriculam-cards .card{
         padding: 30px;
@@ -458,6 +460,10 @@ footer{
     .story-1{
         display: none;
         
+    }
+    .story-content button{
+        padding: 5px 10px;
+        margin-left: 20px;
     }
 
 
