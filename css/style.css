@@ -5,9 +5,8 @@
     padding: 0;
 }
 body{
-    background: url(../images/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
-    background-position: center;
-    background-size: cover;
+    background: url(../images/bg.png);
+    background-repeat: repeat;
 }
 
 .title{
@@ -46,16 +45,14 @@ body{
     text-align: left;
 }
 .btn1:hover{
-    background-color: aqua;
+    background-color: darkorchid;
     border: 2px solid wheat;
     transition: .3s;
-    color: red;
 }
 .btn2:hover{
-    background-color: aqua;
+    background-color: darkorchid;
     border: 2px solid wheat;
     transition: .3s;
-    color: red;
 }
 .description{
     color: rgb(17, 17, 17);
@@ -67,8 +64,8 @@ body{
     text-align: left;
 }
 
-nav, .header-content, main, footer{
-    padding: 20px 101px;
+.universal-padding{
+    padding: 40px 101px;
 }
 nav{
     display: flex;
@@ -189,6 +186,7 @@ nav .fa-solid{
     border-radius: 18.86px;
     box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
     padding: 30px;
+    margin-top: 80px;
 }
 .card1{
     background: linear-gradient(180.00deg, rgb(222, 245, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
@@ -244,92 +242,47 @@ nav .fa-solid{
 }
 
 
-
+/* 
 /* stories section  */
+
+.stories{
+    margin: 50px 0 0;
+    padding-bottom: 40px;
+    background: linear-gradient(0.00deg, rgba(254, 161, 1, 0.411),rgba(255, 255, 255, 0.3) 100%);
+}
 .story-content{
     display: grid;
-    grid-template-areas: 
-    "story-1 story-1 story-1 story-2 story-3"
-    "story-1 story-1 story-1 story-4 story-5";
     column-gap: 10px;
     row-gap: 10px;
+    grid-template-columns: 2fr 1fr 1fr;
 }
 .story-card{
-    position: relative;
-    /* width: 290.69px; */
-    width: 100%;
-    /* height: 301.61px; */
-    height: auto;
+    grid-column: span 1;
+    grid-row: span 1;
     border-radius: 16px;
     background: rgb(255, 255, 255);
 }
-.story-card button, h3, p{
-    margin: 20px 30px;
+.story-card > h3 , p{
+    padding: 0 20px 10px;
 }
 .story-1{
-    grid-area: story-1;
-    position: relative;
-    /* width: 540.27px; */
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
     width: 100%;
-    /* height: 610.52px; */
-    height: auto;
-    border-radius: 16px;
-    background: rgb(255, 255, 255);
-}
-
-.story-2{
-    grid-area: story-2;
-}
-.story-3{
-    grid-area: story-3;
-}
-.story-4{
-    grid-area: story-4;
-}
-.story-5{
-    grid-area: story-5;
-}
-
-.story-card img{
-    position: relative;
-    /* width: 291px; */
-    width: 100%;
-    height: 182px;
-    border-radius: 16px 16px 0px 0px;
-    background: rgb(255, 255, 255);
 }
 .story-1 img{
-    /* position: absolute; */
-    /* width: 540px; */
     width: 100%;
-    height: 337px;
-    left: 0;
-    top: 0;
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 16px 16px 0 0;
+}
+.story-2, .story-3, .story-4, .story-5{
+    width: 100%;
+}
+.story-2 > img, .story-3 > img, .story-4 > img, .story-5 > img{
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    /* height: 10px; */
 }
 
-.s-button{
-    position: absolute;
-    /* width: 170px; */
-    width: 100%;
-    margin-top: -40px;
-    margin-left: 20px;
-    padding: 0;
-    background-color: transparent;
-    
-}
-.story-btn{
-    border: none;
-    padding: 10px 25px;
-    /* width: 100%; */
-    width: auto;
-    /* height: 100%; */
-    height: auto;
-    left: 38.35px;
-    top: 157.81px;
-    border-radius: 47.93px;
-    background: rgb(149, 178, 38);
-}
 .story-title{
     color: rgb(0, 0, 0);
     font-family: Quicksand;
@@ -338,7 +291,22 @@ nav .fa-solid{
     line-height: 26.35px;
     letter-spacing: -1px;
     text-align: left;
-    margin-top: 30px;
+    /* margin-top: 10px; */
+}
+.story-content button{
+    display: block;
+    border: none;
+    padding: 8px 16px;
+    position: relative;
+    border-radius: 47.93px;
+    background: rgb(93, 88, 240);
+    margin: -25px  0px 10px 40px;
+    color: rgb(255, 255, 255);
+    font-family: Quicksand;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 28.76px;
+    text-align: left;
 }
 .stories .btn2{
     display: block;
@@ -347,12 +315,11 @@ nav .fa-solid{
 
 
 
-
 /* footer  */
 footer{
     background: rgb(1, 172, 253);
     padding-top: 50px;
-    margin: 0;
+    margin: 0px;
 
 }
 .footer{
@@ -363,22 +330,22 @@ footer{
 }
 .footer div{
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 .logo-flex{
     display: flex;
-    /* justify-content: start; */
     margin: 0;
     height: auto;
     width: 100%;
 }
 .logo-flex img{
-    filter:grayscale();
     margin-right: 0;
+    height: 90px;
+    color: white;
     
 }
 .logo-flex .logo-title{
-    margin-left: 0;
+    margin-top: 20px;
     color: rgb(255, 255, 255);
     font-family: Quicksand;
     font-size: 27.14px;
@@ -390,6 +357,7 @@ footer{
 .footer-logo .description{
     margin-left: 0px;
     margin-right: 0;
+    margin-top: 20px;
     padding-left: 0;
     color: white;
 }
@@ -405,7 +373,7 @@ footer{
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0%;
-    text-align: center;
+    text-align: left;
 }
 .footer-about li{
     list-style-type: none;
@@ -432,7 +400,6 @@ footer{
 /* for mobile devices  */
 @media screen and (max-width: 576px){
     .header-content, main{
-        padding: 10px 30px; 
     }
     nav h3, li, .btn1{
         display: none;
@@ -440,7 +407,7 @@ footer{
     nav{
         margin: 0;
         padding: 0 20px 10px;
-        border-bottom: 2px solid rgb(254, 163, 1);
+        border-bottom: 1px solid rgb(254, 163, 1);
     }
 
     nav .fa-solid{
@@ -469,17 +436,24 @@ footer{
         margin: 0 auto;
     }
 
-
+    
+    .curriculam{
+        padding: 40px;
+    }
+    .curriculam-cards .card{
+        padding: 30px;
+    }
     .curriculam-cards{
         flex-direction: column;
     }
 
 
+    .stories{
+        padding: 20px 10px;
+    }
     .story-content{
-        grid-template-areas: "story-2"
-         "story-3"
-        "story-4"
-        "story-5";
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
     }
     .story-1{
         display: none;
@@ -489,6 +463,11 @@ footer{
 
     .footer{
         flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .footer .description{
+        text-align: left;
     }
     .footer li{
         display: block;
@@ -505,7 +484,7 @@ footer{
 /* for tablet divices  */
 @media (min-width: 576px) and (max-width: 900px){
     header, main{
-        padding: 30px 50px;
+        padding: 30px 0px;
     }
     
     nav .fa-solid{
@@ -541,8 +520,7 @@ footer{
 
 
     .story-content{
-        grid-template-areas: "story-2 story-3"
-        "story-4 story-5";
+        grid-template-columns: 1fr 1fr;
     }
     .story-title{
         display: block;
